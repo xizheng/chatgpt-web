@@ -5,6 +5,9 @@ import { chatConfig, chatReplyProcess, currentModel } from './chatgpt'
 import { auth } from './middleware/auth'
 import { limiter } from './middleware/limiter'
 import { isNotEmptyString } from './utils/is'
+import { latest } from './database/knex'
+
+latest()
 
 const app = express()
 const router = express.Router()
